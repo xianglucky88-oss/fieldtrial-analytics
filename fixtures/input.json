@@ -1,0 +1,34 @@
+{
+  "observations": [
+    {
+      "plot": "P1",
+      "block": "B1",
+      "treatment": "A",
+      "value": 10
+    },
+    {
+      "plot": "P2",
+      "block": "B1",
+      "treatment": "B",
+      "value": 14
+    },
+    {
+      "plot": "P3",
+      "block": "B2",
+      "treatment": "A",
+      "value": 12
+    },
+    {
+      "plot": "P4",
+      "block": "B2",
+      "treatment": "B",
+      "value": 16
+    },
+    {
+      "plot": "P5",
+      "block": "B2",
+      "treatment": "B",
+      "value": null
+    }
+  ]
+}
