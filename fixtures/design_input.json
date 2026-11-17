@@ -1,0 +1,95 @@
+{
+  "experiment": {"id": "EXP-2025-01", "design": "split_plot"},
+  "cycles": [
+    {
+      "cycle": "2024-S1",
+      "revision": 4,
+      "frozen": true,
+      "blocks": ["B1"],
+      "assignments": [
+        {"plot": "Q1", "block": "B1", "main_treatment": "N0"},
+        {"plot": "Q2", "block": "B1", "main_treatment": "N1"}
+      ],
+      "anomaly_rules": {"yield": {"min": 0, "max": 9000}}
+    },
+    {
+      "cycle": "2025-S1",
+      "revision": 2,
+      "frozen": false,
+      "start_date": "2025-03-01",
+      "end_date": "2025-08-31",
+      "weather_window": {"start": "2025-06-01", "end": "2025-06-07"},
+      "blocks": ["B1", "B2"],
+      "assignments": [
+        {"plot": "P1", "block": "B1", "main_treatment": "N0", "sub_treatment": "V1"},
+        {"plot": "P2", "block": "B1", "main_treatment": "N0", "sub_treatment": "V2"},
+        {"plot": "P3", "block": "B1", "main_treatment": "N1", "sub_treatment": "V1"},
+        {"plot": "P4", "block": "B1", "main_treatment": "N1", "sub_treatment": "V2"},
+        {"plot": "P5", "block": "B2", "main_treatment": "N0", "sub_treatment": "V1"},
+        {"plot": "P6", "block": "B2", "main_treatment": "N0", "sub_treatment": "V2"},
+        {"plot": "P7", "block": "B2", "main_treatment": "N1", "sub_treatment": "V1"},
+        {"plot": "P8", "block": "B2", "main_treatment": "N1", "sub_treatment": "V2"},
+        {"plot": "P9", "block": "B1", "main_treatment": "N0", "sub_treatment": "V1", "effective_from": "2025-03-01", "effective_to": "2025-06-01"},
+        {"plot": "P9", "block": "B1", "main_treatment": "N1", "sub_treatment": "V1", "effective_from": "2025-06-01"}
+      ],
+      "anomaly_rules": {
+        "yield": {"min": 0, "max": 9000},
+        "plant_height": {"min": 0, "max": 300}
+      }
+    },
+    {
+      "cycle": "2025-S2",
+      "revision": 1,
+      "frozen": false,
+      "blocks": ["B1", "B2"],
+      "assignments": [
+        {"plot": "P10", "block": "B1", "main_treatment": "T1"},
+        {"plot": "P11", "block": "B1", "main_treatment": "T2"},
+        {"plot": "P12", "block": "B2", "main_treatment": "T1"},
+        {"plot": "P13", "block": "B2", "main_treatment": "T2"}
+      ],
+      "anomaly_rules": {"yield": {"min": 0, "max": 20000}}
+    }
+  ],
+  "observations": [
+    {"obs_id": "obs-p1-h3", "cycle": "2025-S1", "plot": "P1", "variable": "plant_height", "value": 62, "unit": "cm", "measured_at": "2025-05-10"},
+    {"obs_id": "obs-p1-yield", "cycle": "2025-S1", "plot": "P1", "variable": "yield", "value": 4500, "unit": "kg/ha", "measured_at": "2025-06-20"},
+    {"obs_id": "obs-p2-yield", "cycle": "2025-S1", "plot": "P2", "variable": "yield", "value": 320, "unit": "kg/mu", "measured_at": "2025-06-21"},
+    {"obs_id": "obs-p1-h1", "cycle": "2025-S1", "plot": "P1", "variable": "plant_height", "value": 40, "unit": "cm", "measured_at": "2025-04-10"},
+    {"obs_id": "obs-p3-yield", "cycle": "2025-S1", "plot": "P3", "variable": "yield", "value": 5.2, "unit": "t/ha", "measured_at": "2025-06-20"},
+    {"obs_id": "obs-p4-yield", "cycle": "2025-S1", "plot": "P4", "variable": "yield", "value": 96, "unit": "kg/plot", "area_value": 0.3, "area_unit": "mu", "measured_at": "2025-06-22"},
+    {"obs_id": "obs-p5-yield", "cycle": "2025-S1", "plot": "P5", "variable": "yield", "value": null, "unit": "kg/ha", "measured_at": "2025-06-21", "missing_reason": "disease"},
+    {"obs_id": "obs-p6-yield", "cycle": "2025-S1", "plot": "P6", "variable": "yield", "value": 5100, "unit": "kg/ha", "measured_at": "2025-06-23"},
+    {"obs_id": "obs-p6-yield", "cycle": "2025-S1", "plot": "P6", "variable": "yield", "value": 5150, "unit": "kg/ha", "measured_at": "2025-06-23"},
+    {"obs_id": "obs-p7-yield", "cycle": "2025-S1", "plot": "P7", "variable": "yield", "value": 0, "unit": "kg/ha", "measured_at": "2025-06-20"},
+    {"obs_id": "obs-p8-yield", "cycle": "2025-S1", "plot": "P8", "variable": "yield", "value": 12000, "unit": "kg/ha", "measured_at": "2025-06-24"},
+    {"obs_id": "obs-p9b-yield", "cycle": "2025-S1", "plot": "P9", "variable": "yield", "value": 5600, "unit": "kg/ha", "measured_at": "2025-07-10"},
+    {"obs_id": "obs-p9a-yield", "cycle": "2025-S1", "plot": "P9", "variable": "yield", "value": 4300, "unit": "kg/ha", "measured_at": "2025-05-20"},
+    {"obs_id": "obs-p1-h2", "cycle": "2025-S1", "plot": "P1", "variable": "plant_height", "value": 51, "unit": "cm", "measured_at": "2025-04-25"},
+    {"obs_id": "obs-p2-h1", "cycle": "2025-S1", "plot": "P2", "variable": "plant_height", "value": 45, "unit": "cm", "measured_at": "2025-04-12", "exclude": true, "exclusion_reason": "lodging"},
+    {"obs_id": "obs-p2-yield", "cycle": "2025-S1", "plot": "P2", "variable": "yield", "value": 320, "unit": "kg/mu", "measured_at": "2025-06-21"},
+    {"obs_id": "obs-p10-yield", "cycle": "2025-S2", "plot": "P10", "variable": "yield", "value": 300, "unit": "kg/mu", "measured_at": "2025-09-15"},
+    {"obs_id": "obs-p11-yield", "cycle": "2025-S2", "plot": "P11", "variable": "yield", "value": 4700, "unit": "kg/ha", "measured_at": "2025-09-15"},
+    {"obs_id": "obs-2024-q3-yield", "cycle": "2024-S1", "plot": "Q3", "variable": "yield", "value": 9999, "unit": "kg/ha", "measured_at": "2024-06-21"}
+  ],
+  "weather": [
+    {"cycle": "2025-S1", "date": "2025-06-01", "tmax_c": 28, "rain_mm": 4},
+    {"cycle": "2025-S1", "date": "2025-06-02", "tmax_c": 27, "rain_mm": null},
+    {"cycle": "2025-S1", "date": "2025-06-04", "tmax_c": 30, "rain_mm": 0},
+    {"cycle": "2025-S1", "date": "2025-06-05", "tmax_c": 31, "rain_mm": 0},
+    {"cycle": "2025-S1", "date": "2025-06-07", "tmax_c": 29, "rain_mm": 12}
+  ],
+  "prior_snapshots": {
+    "2024-S1": {
+      "snapshot_id": "snap-2024s1-v3",
+      "version": 3,
+      "config_hash": "cfg-2024s1-v3",
+      "frozen": true,
+      "rows": [
+        {"obs_id": "obs-2024-q1-yield", "cycle": "2024-S1", "plot": "Q1", "block": "B1", "main_treatment": "N0", "sub_treatment": null, "treatment_path": "N0", "variable": "yield", "measured_at": "2024-06-20", "raw_value": 4100, "raw_unit": "kg/ha", "area_value": null, "area_unit": null, "value": 4100.0, "unit": "kg/ha", "conversion": null, "missing_reason": null, "exclusion_reason": null, "included": true, "measure_index": 1},
+        {"obs_id": "obs-2024-q2-yield", "cycle": "2024-S1", "plot": "Q2", "block": "B1", "main_treatment": "N1", "sub_treatment": null, "treatment_path": "N1", "variable": "yield", "measured_at": "2024-06-20", "raw_value": 4700, "raw_unit": "kg/ha", "area_value": null, "area_unit": null, "value": 4700.0, "unit": "kg/ha", "conversion": null, "missing_reason": null, "exclusion_reason": null, "included": true, "measure_index": 1}
+      ],
+      "exclusions": []
+    }
+  }
+}
